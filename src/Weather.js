@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+
 export default function Weather() {
   return (
     <div className="Weather">
@@ -10,10 +11,11 @@ export default function Weather() {
               type="search"
               placeholder="Enter a city.."
               className="form-control"
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
+            <input type="submit" value="Search" className="btn w-100" />
           </div>
         </div>
       </form>
@@ -23,19 +25,21 @@ export default function Weather() {
         <li>Friday 11:11</li>
         <li>Mostly Cloudy</li>
       </ul>
-      <div className="row">
+
+      <div className="row mt-3">
         <div className="col-6">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="Mostly Cloudy"
           />
-          16°C
+          <span className="temperature">16</span>
+          <span className="unit">°C</span>
         </div>
         <div className="col-6">
           <ul>
             <li>Precipitation: 35%</li>
             <li>Humidity: 66%</li>
-            <li>Wind:27 km/h</li>
+            <li>Wind: 27 km/h</li>
           </ul>
         </div>
       </div>
